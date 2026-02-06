@@ -1,0 +1,33 @@
+---
+const pillars = [
+  {
+    title: 'SECURITY',
+    image: 'https://essentialtechhelp.com/wp-content/uploads/2023/01/4-1.png',
+  },
+  {
+    title: 'BACKUP',
+    image: 'https://essentialtechhelp.com/wp-content/uploads/2023/01/2-1.png',
+  },
+  {
+    title: 'SUPPORT',
+    image: 'https://essentialtechhelp.com/wp-content/uploads/2023/01/1.png',
+  },
+];
+---
+
+<section class="py-16 md:py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-8">
+      {pillars.map(pillar => (
+        <div class="text-center">
+          <div class="mb-6 flex justify-center">
+            <img src={pillar.image} alt={pillar.title} class="h-24 w-24 object-contain" />
+          </div>
+          <h3 class="font-heading font-bold text-2xl text-[#333333]">
+            {pillar.title}
+          </h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
